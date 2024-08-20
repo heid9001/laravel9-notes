@@ -2,6 +2,7 @@
 
 ## Запуск
 ```bash
+mkdir docker/db
 docker compose up -d
 docker compose exec fpm /bin/bash
 npm install
