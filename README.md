@@ -1,5 +1,9 @@
 ## Laravel 9 Редактор заметок на основе AlpineJS
 
+## Настройка
+- .env нужно сопоставить с docker-compose сервисами
+- DOCKER_UID и DOCKER_GID (.env) нужно установить равными ```id -u && id -g```
+
 ## Запуск
 ```bash
 mkdir docker/db
