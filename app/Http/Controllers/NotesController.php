@@ -15,14 +15,7 @@ class NotesController extends Controller
     }
 
     public function paging() {
-//        $pagination = DB::table('notes')
-//            ->where('user_id', Auth::user()->id)
-//            ->paginate(2)
-//        ;
-//        return $pagination;
-
         return Note::where('user_id', Auth::user()->id)
-                        ->where('user_id', Auth::user()->id)
                         ->paginate(2);
     }
 
