@@ -1,0 +1,37 @@
+services:
+  fpm:
+    build:
+      context: docker/fpm
+      args:
+        DOCKER_UID: ${DOCKER_UID}
+        DOCKER_GID: ${DOCKER_GID}
+    user: "${DOCKER_UID}:${DOCKER_GID}"
+    ports:
+        - "80:20080"
+    volumes:
+      - .:/var/www/app
+
+  nginx:
+    build:
+      context: docker/nginx
+      args:
+        DOCKER_UID: ${DOCKER_UID}
+        DOCKER_GID: ${DOCKER_GID}
+    ports:
+      - "8080:80"
+    links:
+      - fpm
+    volumes:
+      - .:/var/www/app
+
+  db:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+      MYSQL_DATABASE: app
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./docker/db:/var/lib/mysql:rw

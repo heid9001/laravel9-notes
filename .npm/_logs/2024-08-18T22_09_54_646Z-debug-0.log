@@ -1,0 +1,18 @@
+0 verbose cli /usr/bin/node /usr/bin/npm
+1 info using npm@10.8.2
+2 info using node@v22.6.0
+3 silly config load:file:/usr/lib/node_modules/npm/npmrc
+4 silly config load:file:/var/www/app/.npmrc
+5 silly config load:file:/usr/etc/npmrc
+6 verbose title npm run build
+7 verbose argv "run" "build"
+8 verbose logfile logs-max:10 dir:/var/www/app/.npm/_logs/2024-08-18T22_09_54_646Z-
+9 verbose logfile /var/www/app/.npm/_logs/2024-08-18T22_09_54_646Z-debug-0.log
+10 silly logfile start cleaning logs, removing 1 files
+11 silly logfile done cleaning log files
+12 verbose cwd /var/www/app
+13 verbose os Linux 6.1.90-1-MANJARO
+14 verbose node v22.6.0
+15 verbose npm  v10.8.2
+16 verbose exit 0
+17 info ok
